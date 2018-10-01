@@ -17,9 +17,7 @@ $(document).ready(function () {
 //        vertical:true
 //    });
     
-    $('.column-projects').masonry({
-      itemSelector: '.column-projects__item'
-    });
+   
     
     
     $('.ham-menu').click(function(){
@@ -31,7 +29,19 @@ $(document).ready(function () {
     });
     
     
-    var win = $(window);
+   
+    
+    
+    
+    
+    
+    
+    
+    
+});
+
+$(window).load(function() {
+     var win = $(window);
     
 
     var scrFunc = function () {
@@ -51,13 +61,9 @@ $(document).ready(function () {
          scrFunc();
         
     });
-    
-    
-    
-    
-    
-    
-    
+     $('.column-projects').masonry({
+      itemSelector: '.column-projects__item'
+    });
     
     
 });
