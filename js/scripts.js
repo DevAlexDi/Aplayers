@@ -41,6 +41,9 @@ $(document).ready(function () {
 });
 
 $(window).load(function() {
+    $('.column-projects').masonry({
+      itemSelector: '.column-projects__item'
+    });
      var win = $(window);
     
 
@@ -61,9 +64,7 @@ $(window).load(function() {
          scrFunc();
         
     });
-     $('.column-projects').masonry({
-      itemSelector: '.column-projects__item'
-    });
+  
     
     
 });
