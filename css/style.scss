@@ -541,6 +541,9 @@ footer{
             width: 100%;
             overflow: hidden;
             margin-bottom: 30px;
+            @media (max-width: 767px){
+               margin-bottom: 20px;
+            }
             &:before{
                 content: '';
                 display: block;
@@ -605,9 +608,22 @@ footer{
     flex-wrap: wrap;
     align-items: flex-start;
     margin-bottom: 55px;
+    @media (max-width: 767px){
+       padding: 0 7px;
+    }
     &__item{
         width: 25%;
         padding: 15px;
+        @media (max-width: 1280px){
+           padding: 10px;
+        }
+        @media (max-width: 991px){
+           width: 33.33%;
+        }
+        @media (max-width: 767px){
+           width: 50%;
+            padding: 7px;
+        }
         &__before{
             position: relative;
             width: 100%;
@@ -631,5 +647,23 @@ footer{
                 background-size: cover;
             }
         }
+    }
+}
+.butt-go-to-project{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 275px;
+    @media (max-width: 1280px){
+       margin-bottom: 85px;
+    }
+    
+    a{
+        display: block;
+        font-size: 15px;
+        color: #fff;
+        font-weight: $b;
+        background: #C4C4C4;
+        text-transform: uppercase;
+        padding: 18px 32px;
     }
 }

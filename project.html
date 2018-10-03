@@ -9,9 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:500" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/default-skin.css" rel="stylesheet">  
+    <link href="css/photoswipe.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/media.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,7 +112,7 @@
                 <div class="slider-nav">
                     <div class="slider-nav__slide active-sl">
                         <div class="slider-nav__slide__before">
-                            <div class="slider-nav__slide__before__img" style="background-image: url(img/slide.jpg)"></div>
+                            <div class="slider-nav__slide__before__img"  style="background-image: url(img/slide.jpg)"></div>
                         </div>
                     </div>
                     <div class="slider-nav__slide">
@@ -181,33 +182,71 @@
     </section>
     <section class="padd-15">
         <div class="flex-photos">
-            <div class="flex-photos__item">
+            <div class="flex-photos__item" data-size="443x443" data-hreff="img/p-1.jpg">
                 <div class="flex-photos__item__before">
                     <div class="flex-photos__item__before__img" style="background-image: url(img/p-1.jpg)"></div>
                 </div>
             </div>
-            <div class="flex-photos__item">
+            <div class="flex-photos__item" data-size="442x370" data-hreff="img/1.jpg">
                 <div class="flex-photos__item__before">
                     <div class="flex-photos__item__before__img" style="background-image: url(img/1.jpg)"></div>
                 </div>
             </div>
-            <div class="flex-photos__item">
+            <div class="flex-photos__item" data-size="443x478" data-hreff="img/2.jpg">
                 <div class="flex-photos__item__before">
                     <div class="flex-photos__item__before__img" style="background-image: url(img/2.jpg)"></div>
                 </div>
             </div>
-            <div class="flex-photos__item">
+            <div class="flex-photos__item" data-size="442x534" data-hreff="img/3.jpg">
                 <div class="flex-photos__item__before">
                     <div class="flex-photos__item__before__img" style="background-image: url(img/3.jpg)"></div>
                 </div>
             </div>
-            <div class="flex-photos__item">
+            <div class="flex-photos__item" data-size="443x548" data-hreff="img/4.jpg">
                 <div class="flex-photos__item__before">
                     <div class="flex-photos__item__before__img" style="background-image: url(img/4.jpg)"></div>
                 </div>
             </div>
         </div>
         
+    </section>
+    <section class="padd-30">
+        <div class="gum-padd">
+            <h2 class="head-style">BEHIND THE SCENE</h2>
+            <div class="about-sec__text">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. We work with the clients worldwide, and take any opportunity we can to improve even more, we don’t like to set limits in any shape or form. We always offer full freedom to the client to show us, what he wants and we work hard on implementing all of the clients wishes and thoughts into the project. We as a team like to set new goals and new challenges for us to achieve, sky is not the limit.</p>
+            </div>
+        </div>
+    </section>
+    <section class="padd-15">
+        <div class="flex-photos">
+            <div class="flex-photos__item" data-size="443x548" data-hreff="img/4.jpg">
+                <div class="flex-photos__item__before">
+                    <div class="flex-photos__item__before__img" style="background-image: url(img/4.jpg)"></div>
+                </div>
+            </div>
+            
+            <div class="flex-photos__item" data-size="443x478" data-hreff="img/2.jpg">
+                <div class="flex-photos__item__before">
+                    <div class="flex-photos__item__before__img" style="background-image: url(img/2.jpg)"></div>
+                </div>
+            </div>
+            <div class="flex-photos__item" data-size="442x370" data-hreff="img/1.jpg">
+                <div class="flex-photos__item__before">
+                    <div class="flex-photos__item__before__img" style="background-image: url(img/1.jpg)"></div>
+                </div>
+            </div>
+            <div class="flex-photos__item" data-size="442x534" data-hreff="img/3.jpg">
+                <div class="flex-photos__item__before">
+                    <div class="flex-photos__item__before__img" style="background-image: url(img/3.jpg)"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="padd-15">
+        <div class="butt-go-to-project">
+            <a href="#">back to projects</a>
+        </div>
     </section>
     <section class="padd-30">
         <footer>
@@ -259,10 +298,49 @@
             </ul>
         </div>
     </div>
-    
+    <!--photo-galary-->
+     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--/photo-galary-->
     
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+      <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
     <script src="js/masonry.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
