@@ -94,6 +94,7 @@ header{
                     color: #000;
                     transition: 0.3s;
                     font-size: 15px;
+                    letter-spacing: 1.5px;
                 }
             }
         }
@@ -153,6 +154,7 @@ header{
         display: block;
         font-size: 16px;
         color: #000;
+        letter-spacing: 0.5px;
     }
 }
 
@@ -163,7 +165,7 @@ header{
     }
     &__item{
         width: 25%;
-        padding: 0 15px 20px 15px;
+        padding: 0 15px 30px 15px;
         opacity: 0;
         &[data-anim=true]{
             opacity: 1;
@@ -198,9 +200,10 @@ header{
                 align-items: center;
                 color: #fff;
                 font-size: 24px;
-                letter-spacing: 1.1px;
+                letter-spacing: 2px;
                 transition: 0.3s;
                 text-transform: uppercase;
+                
                 @media (max-width: 991px){
                     font-size: 16px;
                 }
@@ -219,6 +222,8 @@ header{
         a,span{
             display: block;
             color: #000;
+            font-size: 16px;
+            letter-spacing: 0.5px;
         }
     }
 }
@@ -341,7 +346,7 @@ footer{
 .gum-padd{
     padding: 0 10.2%;
     @media (max-width: 991px){
-       padding: 0;
+       padding: 0 5%;
     }
 }
 .head-style{
@@ -530,6 +535,7 @@ footer{
             position: relative;
             z-index: 2;
             top: 1px;
+            letter-spacing: 1.5px;
         }
     }
 }
@@ -569,10 +575,35 @@ footer{
     margin: 0 auto;
     margin-bottom: 70px;
 }
+.photos-wrapp::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+.photos-wrapp::-webkit-scrollbar-button {
+    width: 2px;
+    height: 2px;
+}
+
+
 .slider-nav{
+    position: relative;
+    .photos-wrapp{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 217px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transform: rotate(-90deg) translateY(-217px);
+        transform-origin: right top;
+        
+    }
     &__slide{
+        width: 12%;
         padding: 1px;
         cursor: pointer;
+        transform: rotate(90deg);
+        transform-origin: center;
         outline: none;
         &.active-sl{
             .slider-nav__slide__before{
