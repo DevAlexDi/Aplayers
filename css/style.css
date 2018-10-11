@@ -126,8 +126,7 @@ header {
   .main-baner__text {
     display: block;
     font-size: 16px;
-    color: #000;
-    letter-spacing: 0.5px; }
+    color: #000; }
 
 .column-projects {
   margin-bottom: 100px; }
@@ -140,7 +139,7 @@ header {
     opacity: 0; }
     .column-projects__item[data-anim=true] {
       opacity: 1;
-      transition: opacity 1s cubic-bezier(0.39, 0.575, 0.565, 1); }
+      transition: opacity 1.3s cubic-bezier(0.39, 0.575, 0.565, 1); }
     @media (max-width: 1280px) {
       .column-projects__item {
         padding: 0 10px 20px 10px; } }
@@ -184,15 +183,11 @@ header {
     .column-projects__item a, .column-projects__item span {
       display: block;
       color: #000;
-      font-size: 16px;
-      letter-spacing: 0.5px; }
+      font-size: 16px; }
 
 footer {
   border-top: 1px solid #DDDDDD;
-  padding: 30px 0 80px 0; }
-  @media (max-width: 1280px) {
-    footer {
-      padding: 30px 0; } }
+  padding: 30px 0; }
   footer p {
     margin: 0;
     color: #999999;
@@ -233,7 +228,7 @@ footer {
   .xs-menu__close {
     position: absolute;
     top: 25px;
-    right: 20px;
+    right: 10px;
     width: 34px;
     height: 34px;
     background: transparent;
@@ -298,11 +293,14 @@ footer {
   margin-top: 0;
   font-size: 36px;
   font-weight: normal;
-  font-family: "Barlow Semi Condensed", sans-serif;
-  padding-left: 28px;
+  font-family: "Barlow Condensed", sans-serif;
+  padding-left: 48px;
   margin-bottom: 54px;
   position: relative;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+  .head-style--less-padding {
+    padding-left: 28px; }
   .head-style:before {
     content: "";
     display: block;
@@ -369,7 +367,7 @@ footer {
           padding-right: 0;
           margin-bottom: 40px; } }
       .people-about__item__description p {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         font-size: 16px;
         line-height: 30px; }
         @media (max-width: 767px) {
@@ -481,7 +479,7 @@ footer {
 .m-w-slider-nav {
   max-width: 1142px;
   margin: 0 auto;
-  margin-bottom: 70px; }
+  margin-bottom: 90px; }
 
 .photos-wrapp::-webkit-scrollbar {
   width: 2px;
@@ -535,7 +533,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 55px; }
+  margin-bottom: 75px; }
   @media (max-width: 767px) {
     .flex-photos {
       padding: 0 7px; } }
