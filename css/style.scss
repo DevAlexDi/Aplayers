@@ -494,25 +494,46 @@ footer{
         @media (max-width: 767px){
            display: block;
         }
+        .w-50{
+            width: 50%;
+            &:last-child{
+                input{
+                    width: calc(100% + 1px);
+                    position: relative;
+                    left: -1px;
+                }
+            }
+        }
+       
         input{
+            
             &.border{
                border: 1px solid #DDDDDD;
                 &.error{
                     border: 1px solid #FF2E5D;
-                }
-                &.not-err{
-                     border-right: 1px solid #FF2E5D;
-                }
-                &:last-child{
-                    border-left: none;
-                    @media (max-width: 767px){
-                        border-left: 1px solid #DDDDDD;
-                         border-top:none;
+                    z-index: 5;
+                    position: relative;
+                    color: #FF2E5D;
+                    &::-webkit-input-placeholder {
+                        color: #FF2E5D;
                     }
-                }
+                    &::-moz-placeholder {
+                        color: #FF2E5D;
+                    }
+                    &:-moz-placeholder {
+                        color: #FF2E5D;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #FF2E5D;
+                    }
+                }             
             }
             
         }
+    }
+    .w-100{
+        position: relative;
+        margin-top: -1px;
     }
     input,textarea{
         outline: none;
@@ -521,8 +542,9 @@ footer{
         background: #F9F9F9;
         padding: 18px 20px;
         font-size: 15px;
-        color: #999999;
-        
+        color: #000;
+        transition: 0.2s;
+        border: 1px solid #DDDDDD;
         &::-webkit-input-placeholder {
             color: #999999;
         }
@@ -535,9 +557,34 @@ footer{
         &:-ms-input-placeholder {
             color: #999999;
         }
+        &.error{
+            border: 1px solid #FF2E5D;
+            z-index: 5;
+            position: relative;
+            color: #FF2E5D;
+        }
+        &:focus{
+            border-color: #000!important;
+            z-index: 15;
+            position: relative;
+            color: #000!important;
+            
+            &::-webkit-input-placeholder {
+               color: #000!important;
+            }
+            &::-moz-placeholder {
+                color: #000!important;
+            }
+            &:-moz-placeholder {
+                color: #000!important;
+            }
+            &:-ms-input-placeholder {
+                color: #000!important;
+            }
+        }
     }
     input{
-        border: none; 
+        
         border-left: 1px solid #DDDDDD;
         border-right: 1px solid #DDDDDD;
         
@@ -558,7 +605,15 @@ footer{
         outline: none;
         padding: 16px 0;
         border: none;
+        transition: 0.3s;
         background: transparent;
+         background: #FF2E5D;
+        &:hover{
+           
+            &:before{
+                opacity: 0;
+            }
+        }
         &:before{
             content: "";
             display: block;
@@ -566,6 +621,7 @@ footer{
             top: 0;
             left: 0;
             width: 100%;
+            transition: 0.3s;
             height: 100%;
             background: linear-gradient(to right, #FF038E, #FF582C);
         }
@@ -740,5 +796,30 @@ footer{
         background: #C4C4C4;
         text-transform: uppercase;
         padding: 18px 32px;
+    }
+}
+.modal-backdrop{
+     background-color: rgba(0,0,0,0.5);
+}
+#ok-modal{
+   
+    .modal-dialog{
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: 0;
+        border: 1px solid #DDDDDD;
+        width: 680px;
+        padding: 71px;
+        p{
+            font-size: 36px;
+            font-family: $second_font;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 44px;
+        }
     }
 }

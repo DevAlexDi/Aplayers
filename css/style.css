@@ -472,18 +472,30 @@ footer {
     @media (max-width: 767px) {
       .contact-form__flex {
         display: block; } }
+    .contact-form__flex .w-50 {
+      width: 50%; }
+      .contact-form__flex .w-50:last-child input {
+        width: calc(100% + 1px);
+        position: relative;
+        left: -1px; }
     .contact-form__flex input.border {
       border: 1px solid #DDDDDD; }
       .contact-form__flex input.border.error {
-        border: 1px solid #FF2E5D; }
-      .contact-form__flex input.border.not-err {
-        border-right: 1px solid #FF2E5D; }
-      .contact-form__flex input.border:last-child {
-        border-left: none; }
-        @media (max-width: 767px) {
-          .contact-form__flex input.border:last-child {
-            border-left: 1px solid #DDDDDD;
-            border-top: none; } }
+        border: 1px solid #FF2E5D;
+        z-index: 5;
+        position: relative;
+        color: #FF2E5D; }
+        .contact-form__flex input.border.error::-webkit-input-placeholder {
+          color: #FF2E5D; }
+        .contact-form__flex input.border.error::-moz-placeholder {
+          color: #FF2E5D; }
+        .contact-form__flex input.border.error:-moz-placeholder {
+          color: #FF2E5D; }
+        .contact-form__flex input.border.error:-ms-input-placeholder {
+          color: #FF2E5D; }
+  .contact-form .w-100 {
+    position: relative;
+    margin-top: -1px; }
   .contact-form input, .contact-form textarea {
     outline: none;
     display: block;
@@ -491,7 +503,10 @@ footer {
     background: #F9F9F9;
     padding: 18px 20px;
     font-size: 15px;
-    color: #999999; }
+    color: #000;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border: 1px solid #DDDDDD; }
     .contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder {
       color: #999999; }
     .contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
@@ -500,8 +515,25 @@ footer {
       color: #999999; }
     .contact-form input:-ms-input-placeholder, .contact-form textarea:-ms-input-placeholder {
       color: #999999; }
+    .contact-form input.error, .contact-form textarea.error {
+      border: 1px solid #FF2E5D;
+      z-index: 5;
+      position: relative;
+      color: #FF2E5D; }
+    .contact-form input:focus, .contact-form textarea:focus {
+      border-color: #000 !important;
+      z-index: 15;
+      position: relative;
+      color: #000 !important; }
+      .contact-form input:focus::-webkit-input-placeholder, .contact-form textarea:focus::-webkit-input-placeholder {
+        color: #000 !important; }
+      .contact-form input:focus::-moz-placeholder, .contact-form textarea:focus::-moz-placeholder {
+        color: #000 !important; }
+      .contact-form input:focus:-moz-placeholder, .contact-form textarea:focus:-moz-placeholder {
+        color: #000 !important; }
+      .contact-form input:focus:-ms-input-placeholder, .contact-form textarea:focus:-ms-input-placeholder {
+        color: #000 !important; }
   .contact-form input {
-    border: none;
     border-left: 1px solid #DDDDDD;
     border-right: 1px solid #DDDDDD; }
   .contact-form textarea {
@@ -518,7 +550,12 @@ footer {
     outline: none;
     padding: 16px 0;
     border: none;
-    background: transparent; }
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background: transparent;
+    background: #FF2E5D; }
+    .contact-form button:hover:before {
+      opacity: 0; }
     .contact-form button:before {
       content: "";
       display: block;
@@ -526,6 +563,8 @@ footer {
       top: 0;
       left: 0;
       width: 100%;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
       height: 100%;
       background: -webkit-gradient(linear, left top, right top, from(#FF038E), to(#FF582C));
       background: linear-gradient(to right, #FF038E, #FF582C); }
@@ -690,5 +729,27 @@ footer {
     background: #C4C4C4;
     text-transform: uppercase;
     padding: 18px 32px; }
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+#ok-modal .modal-dialog {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  border: 1px solid #DDDDDD;
+  width: 680px;
+  padding: 71px; }
+  #ok-modal .modal-dialog p {
+    font-size: 36px;
+    font-family: "Barlow Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 44px; }
 
 /*# sourceMappingURL=style.css.map */

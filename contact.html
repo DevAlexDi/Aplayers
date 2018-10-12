@@ -83,11 +83,20 @@
                 <form class="contact-form">
                     
                     <div class="contact-form__flex">
-                        <input class="border not-err" type="text" placeholder="Name" required>
-                        <input class="border error" type="email" placeholder="Email" required>
+                        <!--not-err только если у первого есть а у второго нет-->
+                        <div class="w-50">
+                            <input class="border error" type="text" placeholder="Name" required>
+                        </div>
+                        <div class="w-50">
+                            <input class="border" type="email" placeholder="Email" required>
+                        </div>
                     </div>
-                    <input type="text" placeholder="Subject">
-                    <textarea placeholder="Message"></textarea>
+                    <div class="w-100">
+                        <input type="text"  placeholder="Subject">
+                    </div>
+                    <div class="w-100">
+                        <textarea  placeholder="Message"></textarea>
+                    </div>
                     <button type="submit">
                         <span>SEND MESSAGE</span>
                     </button>
@@ -151,13 +160,25 @@
         </div>
     </div>
     
-    
+    <div class="modal fade" id="ok-modal" >
+        <div class="modal-dialog">
+            <p>Would you like a cup of tea?</p>
+            <button class="close-modal">
+                <span class="close-modal__line-1"></span>
+                <span class="close-modal__line-2"></span>
+            </button>
+            <button data-dismiss="modal">OK</button>
+        </div>
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="js/masonry.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        $('#ok-modal').modal('show');
+    </script>
 </body>
 
 </html>
