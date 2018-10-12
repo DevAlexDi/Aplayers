@@ -70,37 +70,38 @@
     <section class="padd-30">
         <div class="gum-padd">
             <div class="about-sec">
-                <h1 class="head-style head-style--less-padding">CONTACT</h1>
-                <div class="about-sec__text">
-                    <p>
-                        We’re working literally 24/7, so no matter when you send your request you can count on a quick turn-around time.<br>
-                        Feel free to contact us from form or send us an email directly to <a href="#">hello@aplayers.com.</a><br>
-                        Use https://drp.io/ to send us files and paste the link in the message box.<br>
-                        We look forward to working with you!
-                    </p>
-                    
-                </div>
-                <form class="contact-form">
-                    
-                    <div class="contact-form__flex">
-                        <!--not-err только если у первого есть а у второго нет-->
-                        <div class="w-50">
-                            <input class="border error" type="text" placeholder="Name" required>
+                <div class="uniq-m-w">
+                    <h1 class="head-style head-style--less-padding">CONTACT</h1>
+                    <div class="about-sec__text">
+                        <p>
+                            We’re working literally 24/7, so no matter when you send your request you can count on a quick turn-around time.<br>
+                            Feel free to contact us from form or send us an email directly to <a href="#">hello@aplayers.com.</a><br>
+                            Use https://drp.io/ to send us files and paste the link in the message box.<br>
+                            We look forward to working with you!
+                        </p>
+
+                    </div>
+                    <form class="contact-form">
+
+                        <div class="contact-form__flex">
+                            <div class="w-50">
+                                <input class="border error" type="text" placeholder="Name" required>
+                            </div>
+                            <div class="w-50">
+                                <input class="border" type="email" placeholder="Email" required>
+                            </div>
                         </div>
-                        <div class="w-50">
-                            <input class="border" type="email" placeholder="Email" required>
+                        <div class="w-100">
+                            <input type="text"  placeholder="Subject">
                         </div>
+                        <div class="w-100">
+                            <textarea  placeholder="Message"></textarea>
+                        </div>
+                        <button class="butt-style" type="submit">
+                            <span>SEND MESSAGE</span>
+                        </button>
+                    </form>
                     </div>
-                    <div class="w-100">
-                        <input type="text"  placeholder="Subject">
-                    </div>
-                    <div class="w-100">
-                        <textarea  placeholder="Message"></textarea>
-                    </div>
-                    <button type="submit">
-                        <span>SEND MESSAGE</span>
-                    </button>
-                </form>
             </div>
         </div>
     </section>
@@ -163,11 +164,11 @@
     <div class="modal fade" id="ok-modal" >
         <div class="modal-dialog">
             <p>Would you like a cup of tea?</p>
-            <button class="close-modal">
+            <button class="close-modal" data-dismiss="modal">
                 <span class="close-modal__line-1"></span>
                 <span class="close-modal__line-2"></span>
             </button>
-            <button data-dismiss="modal">OK</button>
+            <button class="butt-style butt-style--modal" data-dismiss="modal"><span>OK</span></button>
         </div>
     </div>
     
