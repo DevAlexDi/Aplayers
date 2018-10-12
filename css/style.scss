@@ -87,7 +87,7 @@ header{
             list-style: none;
             margin: 0;
             li{
-                padding: 0 16px;
+                padding: 0 16px;  
                 a,span{
                     display: block;
                     text-transform: uppercase;
@@ -95,6 +95,26 @@ header{
                     transition: 0.3s;
                     font-size: 15px;
                     letter-spacing: 1.5px;
+                    position: relative;
+                    &:before{
+                       content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 0;
+                        background: #FF038E;
+                        height: 2px;
+                        transform: translate(-50%,-2px);
+                        transition: 0.3s;
+                        z-index: -1;
+                    }
+                    &:hover{
+                        &:before{
+                            width: calc(100% + 10px);
+                        }
+                    }
+                    
                 }
             }
         }
@@ -116,6 +136,15 @@ header{
             }
             a{
                 display: block;
+                path{
+                    transition: 0.3s;
+                    
+                }
+                &:hover{
+                    path{
+                        fill: #000;
+                    }
+                }
             }
         }
     }
@@ -381,6 +410,11 @@ footer{
             a{
                 color: #000;
                 border-bottom: 1px solid #000;
+                transition: 0.3s;
+                &:hover{
+                    color: rgba(255, 46, 93, 1); 
+                    border-color: rgba(255, 46, 93, 0.5);
+                }
             }
             &:last-child{
                 margin-bottom: 0;
@@ -463,6 +497,12 @@ footer{
         input{
             &.border{
                border: 1px solid #DDDDDD;
+                &.error{
+                    border: 1px solid #FF2E5D;
+                }
+                &.not-err{
+                     border-right: 1px solid #FF2E5D;
+                }
                 &:last-child{
                     border-left: none;
                     @media (max-width: 767px){
@@ -471,6 +511,7 @@ footer{
                     }
                 }
             }
+            
         }
     }
     input,textarea{
@@ -506,6 +547,9 @@ footer{
         resize: none;
         height: 205px;
         margin-bottom: 30px;
+        &.error{
+            border: 1px solid #FF2E5D;
+        }
     }
     button{
         display: block;
