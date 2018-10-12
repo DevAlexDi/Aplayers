@@ -220,6 +220,7 @@ header{
         width: 25%;
         padding: 0 15px 30px 15px;
         opacity: 0;
+        
         &[data-anim=true]{
             opacity: 1;
              transition: opacity 1.3s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -234,7 +235,14 @@ header{
             padding: 0 14px 20px 14px;
             width: 100%;
         }
-        
+        &:hover{
+            .column-projects__item__img__view{
+                opacity: 1;
+            }
+            a,span{
+                color: #FF2E5D;
+            }
+        }
         &__img{
             margin-bottom: 21px;
             position: relative;
@@ -245,7 +253,7 @@ header{
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                background: rgba(255, 46, 93, 0.75);
+                background: rgba(255, 46, 93, 0.50);
                 z-index: 10;
                 opacity: 0;
                 display: flex;
@@ -261,11 +269,7 @@ header{
                     font-size: 16px;
                 }
             }
-            &:hover{
-                .column-projects__item__img__view{
-                    opacity: 1;
-                }
-            }
+           
             img{
                 display: block;
                 width: 100%;
@@ -276,6 +280,7 @@ header{
             display: block;
             color: #000;
             font-size: 16px;
+            transition: 0.3s;
         }
     }
 }
@@ -398,6 +403,14 @@ footer{
     @media (max-width: 991px){
        padding: 0 5%;
     }
+    @media (max-width: 767px){
+        padding: 0;
+    }
+    &--xs-padd{
+       @media (max-width: 767px){
+            padding: 0 5%;
+        } 
+    }
 }
 .head-style{
     margin-top: 0;
@@ -409,7 +422,13 @@ footer{
     position: relative;
     text-transform: uppercase;
     letter-spacing: 1px;
+    @media (max-width: 991px){
+       margin-bottom: 45px;
+    }
     &--less-padding{
+        padding-left: 28px;
+    }
+    @media (max-width: 767px){
         padding-left: 28px;
     }
     &:before{
@@ -425,9 +444,15 @@ footer{
     }
 }
 .about-sec{
-    padding-top: 70px;
+    padding-top: 100px;
+    @media (max-width: 991px){
+       padding-top: 66px;
+    }
     &__text{
-        margin-bottom: 60px;
+        margin-bottom: 80px;
+        @media (max-width: 991px){
+           margin-bottom: 47px;
+        }
         p{
             margin-bottom: 40px;
             font-size: 16px;
@@ -449,6 +474,10 @@ footer{
 }
 .uniq-m-w{
     max-width: 1030px;
+    margin: 0 auto;
+}
+.uniq-m-w-2{
+    max-width: 1230px;
     margin: 0 auto;
 }
 .people-about{
@@ -718,9 +747,12 @@ footer{
     }
 }
 .m-w-slider-nav{
-    max-width: 1142px;
+    max-width: 1230px;
     margin: 0 auto;
-    margin-bottom: 90px;
+    margin-bottom: 105px;
+    @media (max-width: 991px){
+      margin-bottom: 64px;
+    }
 }
 .photos-wrapp::-webkit-scrollbar {
     width: 2px;
@@ -785,9 +817,12 @@ footer{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    margin-bottom: 75px;
+    margin-bottom: 105px;
     @media (max-width: 767px){
        padding: 0 7px;
+    }
+    @media (max-width: 991px){
+        margin-bottom: 64px;
     }
     &__item{
         width: 25%;
@@ -863,6 +898,11 @@ footer{
         background: transparent;
         border: none;
         padding: 0;
+        &:hover{
+            span{
+                background: #000;
+            }
+        }
         @media (max-width: 767px){
             top: 7px;
             right: 7px;
@@ -872,6 +912,7 @@ footer{
             background: #DDDDDD;
             transform-origin: center;
             display: block;
+            transition: 0.3s;
         }
         &__line-1{
             top: 0;
