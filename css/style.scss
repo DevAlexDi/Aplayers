@@ -843,6 +843,11 @@ footer{
         background: #C4C4C4;
         text-transform: uppercase;
         padding: 18px 32px;
+        transition: 0.3s;
+        letter-spacing: 2px;
+        &:hover{
+            background-color: #000;
+        }
     }
 }
 .modal-backdrop{
