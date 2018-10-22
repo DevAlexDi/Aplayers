@@ -196,13 +196,11 @@ $(document).ready(function () {
         if($(window).width() >= 991){
             curDown = true;
             curXPos = m.pageX;
-            console.log('down');
         }
       });
 
       $(window).mouseup(function(){
           if($(window).width() >= 991){
-            console.log('up');
             curDown = false;
             photosScrollTop = $('.photos-wrapp').scrollTop();
             CountBeginLeftFlag = true;
