@@ -34,13 +34,13 @@ $(document).ready(function () {
     
     //scroll-proj
     
-    var width_scroll = $('.slider-nav').width() / 9;
+    var width_scroll = $('.slider-nav').width() / 9.5;
     
     
     function setScroll(){
         
         if($(window).width()>1280){
-            width_scroll = $('.slider-nav').width() / 9;
+            width_scroll = $('.slider-nav').width() / 9.5;
         }else if($(window).width()<=1280 && $(window).width() > 768){
             width_scroll = 100;    
         }
@@ -55,19 +55,23 @@ $(document).ready(function () {
         $('.photos-wrapp').css({
             'max-height': $('.slider-nav').width()
         });
+        
         $('.slider-nav__slide').css({
             'width': width_scroll
         });
         $('.slider-nav').css({
-            'min-height':  width_scroll
+            'min-height':  width_scroll + 2
         });
         $('.slider-nav .photos-wrapp').css({
-            'width': width_scroll + 2
+            'width': width_scroll + 3
         });
         
         $('.slider-nav .photos-wrapp').css({
             'transform': 'rotate(-90deg) translateY(-'+(width_scroll + 2)+'px)'
-        })
+        });
+        $('.active-cube').css({
+             'height': width_scroll 
+        });
         
     }
     
@@ -76,56 +80,9 @@ $(document).ready(function () {
    
     
     
+
     
     
-    
-    
-    
-//    const slider = $(".slider-nav");
-//    slider.slick({
-//        dots: false,
-//        arrows:false,
-//		slidesToShow: 9,
-//        slidesToScroll: 1,
-//		infinite: false,
-//        speed: 300,
-//        responsive: [
-//            {
-//              breakpoint: 992,
-//              settings: {
-//                slidesToShow: 6,
-//                slidesToScroll: 1
-//                
-//              }
-//            },
-//            {
-//              breakpoint: 767,
-//              settings: {
-//                slidesToShow: 4,
-//                slidesToScroll: 1
-//                
-//              }
-//            }
-//        ]
-//    });
-//
-//    slider.on('wheel', (function(e) {
-//      e.preventDefault();
-//
-//      if (e.originalEvent.deltaY < 0) {
-//        if(slider.slick('slickCurrentSlide') != 0){
-//             $(this).slick('slickPrev');
-//        }
-//        
-//      } else {
-//        
-//          if(slider.slick('slickCurrentSlide') + countOfSlides < $('.slider-nav__slide').length){
-//              $(this).slick('slickNext');
-//          }
-//           
-//      }
-//    }));
-   
     
     $('.ham-menu').click(function(){
         $('.xs-menu').addClass('showed');
@@ -136,13 +93,165 @@ $(document).ready(function () {
     });
     
     
+    
+    
+    var index = 1;
+    
     $('.slider-nav__slide').click(function(){
-        $('.slider-nav__slide').removeClass('active-sl');
-        $(this).addClass('active-sl');
+//        $('.slider-nav__slide').removeClass('active-sl');
+//        $(this).addClass('active-sl');
         
-        $('.slider-project').slick('slickGoTo',$(this).index());
+
+        $('.slider-project').slick('slickGoTo',$(this).index() - 1);
+        
+        if($(this).index() > index){
+            console.log('ok');
+            $('.photos-wrapp').animate({
+                scrollTop: $('.photos-wrapp').scrollTop() + width_scroll
+            }, 300,"linear", function() {
+                photosScrollTop = $('.photos-wrapp').scrollTop();
+            });
+            index = $(this).index();
+        }
+        else{
+            $('.photos-wrapp').animate({
+                scrollTop: $('.photos-wrapp').scrollTop() - width_scroll
+            }, 300, "linear", function() {
+                photosScrollTop = $('.photos-wrapp').scrollTop();
+                
+            });
+            
+            index = $(this).index();
+        }
+        $('.active-cube').css({
+            top: ($(this).index() * width_scroll) - width_scroll
+        });
         
     });
+    
+    
+    
+    //scroll on mousedown
+    
+   
+    
+
+    var curDown = false,
+        curXPos = 0;
+    var photosScrollTop = $('.photos-wrapp').scrollTop();
+
+    var CountBeginLeft;
+    var CountBeginLeftFlag = true;
+    
+    $(window).mousemove(function(m){
+        if(curDown === true && $(window).width() >= 991){        
+            
+          
+            
+            var cur1 = m.pageX ;
+            var cur2 = curXPos ;
+            
+            
+      
+            //console.log( $('.photos-wrapp').scrollTop() + ((cur1 - cur2)* -1));
+            
+//            if(cur1 >= $('.slider-nav').width()){
+//                cur1 = 
+//            }
+
+            
+//            if((cur1 - $('.slider-nav').offset().left) < 0 || 
+//                ($('.photos-wrapp').scrollTop() + $('.slider-nav').width()) >= (($('.slider-nav__slide').width() + 2.2) * $('.slider-nav__slide').length)){
+//                
+//                if(CountBeginLeftFlag){
+//                    CountBeginLeft = cur1;
+//                    
+//                    CountBeginLeftFlag = false;
+//                }
+//                
+//                
+//                console.log(cur1); 
+//                console.log(cur2);
+//               
+//                $('.photos-wrapp').css({
+//                   left: (cur1 - CountBeginLeft) / 2
+//                }) 
+//            }
+//            else{
+//                $('.photos-wrapp').css({
+//                   left: 0
+//                }) 
+//            }
+     
+
+
+            $('.photos-wrapp').scrollTop(photosScrollTop + ((cur1 - cur2)* -1)); 
+         
+            
+            
+        }
+      });
+
+      $(window).mousedown(function(m){
+        if($(window).width() >= 991){
+            curDown = true;
+            curXPos = m.pageX;
+            console.log('down');
+        }
+      });
+
+      $(window).mouseup(function(){
+          if($(window).width() >= 991){
+            console.log('up');
+            curDown = false;
+            photosScrollTop = $('.photos-wrapp').scrollTop();
+            CountBeginLeftFlag = true;
+//            $('.photos-wrapp').animate({
+//                left: "0px"
+//            }, 500);
+          }
+      });
+  
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -178,7 +287,7 @@ $(document).ready(function () {
             // Initialize PhotoSwipe
             options.history = false;
             options.bgOpacity = 0.7;
-            console.log($(this));
+          
             let itemClicked = $(this)[0];
             options.getThumbBoundsFn = function (index) {
                 var thumbnail = itemClicked;
@@ -190,7 +299,7 @@ $(document).ready(function () {
                     w: rect.width
                 };
             }
-            console.log(options);
+
             var lightBox = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
             lightBox.init();
         });
