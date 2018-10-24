@@ -799,11 +799,24 @@ footer{
     height: 2px;
     
 }
+.slider-nav::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+.slider-nav::-webkit-scrollbar-button {
+    width: 2px;
+    height: 2px;
+    
+}
 
 
 .slider-nav{
     position: relative;
     //overflow: hidden;
+    @media (max-width: 991px){
+         overflow-y: hidden;
+        overflow-x: auto;
+    }
     .active-cube{
         position: absolute;
         top: 0;
@@ -830,9 +843,10 @@ footer{
         transform: rotate(-90deg) translateY(-217px);
         transform-origin: right top;
         @media (max-width: 991px){
-            overflow-y: auto;
+            overflow-y: hidden;
             overflow-x: hidden;
-           
+           user-select:auto;
+            max-height: inherit;
         }
         
     }

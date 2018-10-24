@@ -736,8 +736,20 @@ footer {
   width: 2px;
   height: 2px; }
 
+.slider-nav::-webkit-scrollbar {
+  width: 2px;
+  height: 2px; }
+
+.slider-nav::-webkit-scrollbar-button {
+  width: 2px;
+  height: 2px; }
+
 .slider-nav {
   position: relative; }
+  @media (max-width: 991px) {
+    .slider-nav {
+      overflow-y: hidden;
+      overflow-x: auto; } }
   .slider-nav .active-cube {
     position: absolute;
     top: 0;
@@ -765,8 +777,13 @@ footer {
             transform-origin: right top; }
     @media (max-width: 991px) {
       .slider-nav .photos-wrapp {
-        overflow-y: auto;
-        overflow-x: hidden; } }
+        overflow-y: hidden;
+        overflow-x: hidden;
+        -webkit-user-select: auto;
+           -moz-user-select: auto;
+            -ms-user-select: auto;
+                user-select: auto;
+        max-height: inherit; } }
   .slider-nav__slide {
     width: 12%;
     padding: 1px;
