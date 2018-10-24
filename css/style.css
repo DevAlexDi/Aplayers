@@ -783,7 +783,7 @@ footer {
            -moz-user-select: auto;
             -ms-user-select: auto;
                 user-select: auto;
-        max-height: inherit; } }
+        max-height: inherit !important; } }
   .slider-nav__slide {
     width: 12%;
     padding: 1px;
