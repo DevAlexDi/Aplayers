@@ -830,6 +830,9 @@ footer{
             user-select: auto;
             -moz-user-select: auto;
             -khtml-user-select: auto;
+            box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
         }
         
     }
@@ -852,6 +855,9 @@ footer{
            user-select: auto;
             -moz-user-select: auto;
             -khtml-user-select: auto; 
+            box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
         }
         &__before{
             position: relative;

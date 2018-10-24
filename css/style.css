@@ -767,7 +767,10 @@ footer {
             -ms-user-select: auto;
                 user-select: auto;
         -moz-user-select: auto;
-        -khtml-user-select: auto; } }
+        -khtml-user-select: auto;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; } }
   .slider-nav__slide {
     width: 12%;
     padding: 1px;
@@ -787,7 +790,10 @@ footer {
             -ms-user-select: auto;
                 user-select: auto;
         -moz-user-select: auto;
-        -khtml-user-select: auto; } }
+        -khtml-user-select: auto;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; } }
     .slider-nav__slide__before {
       position: relative;
       width: 100%;
