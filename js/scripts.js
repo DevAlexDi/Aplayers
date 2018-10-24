@@ -682,7 +682,7 @@ $(document).ready(function () {
     var CountBeginLeftFlag = true;
     
     $(window).mousemove(function(m){
-        if(curDown === true ){        
+        if(curDown === true && $(window).width() >= 991){        
             
           
             
@@ -731,21 +731,21 @@ $(document).ready(function () {
       });
 
       $(window).mousedown(function(m){
-       
+        if($(window).width() >= 991){
             curDown = true;
             curXPos = m.pageX;
-      
+        }
       });
 
       $(window).mouseup(function(){
-          
+          if($(window).width() >= 991){
             curDown = false;
             photosScrollTop = $('.photos-wrapp').scrollTop();
             CountBeginLeftFlag = true;
 //            $('.photos-wrapp').animate({
 //                left: "0px"
 //            }, 500);
-          
+          }
       });
   
    
