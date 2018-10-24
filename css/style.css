@@ -765,7 +765,7 @@ footer {
             transform-origin: right top; }
     @media (max-width: 991px) {
       .slider-nav .photos-wrapp {
-        overflow-y: hidden;
+        overflow-y: auto;
         overflow-x: hidden; } }
   .slider-nav__slide {
     width: 12%;
