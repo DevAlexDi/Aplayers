@@ -973,4 +973,7 @@ footer {
     text-align: center;
     margin-bottom: 44px; }
 
+.pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
+  background: transparent; }
+
 /*# sourceMappingURL=style.css.map */

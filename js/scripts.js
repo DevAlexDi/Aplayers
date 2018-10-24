@@ -778,7 +778,7 @@ $(document).ready(function () {
     
     
     
-    галерейка проект
+    //галерейка проект
      $('.flex-photos').each(function () {
         var pic = $(this),
             getItems = function () {
