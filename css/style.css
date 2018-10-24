@@ -727,10 +727,22 @@ footer {
 .photos-wrapp::-webkit-scrollbar {
   width: 2px;
   height: 2px; }
+  @media (max-width: 991px) {
+    .photos-wrapp::-webkit-scrollbar {
+      background: #fff;
+      width: 7px;
+      height: auto; } }
 
 .photos-wrapp::-webkit-scrollbar-button {
   width: 2px;
   height: 2px; }
+  @media (max-width: 991px) {
+    .photos-wrapp::-webkit-scrollbar-button {
+      width: auto;
+      height: auto;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 2.5px;
+      cursor: pointer; } }
 
 .slider-nav {
   position: relative; }
