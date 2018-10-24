@@ -163,6 +163,9 @@ header {
       margin-bottom: 20px; } }
   .main-baner:hover .main-baner__before__img:before {
     opacity: 1; }
+  @media (max-width: 991px) {
+    .main-baner:hover .main-baner__before__img:before {
+      opacity: 0; } }
   .main-baner:hover .main-baner__text {
     color: #FF2E5D; }
   .main-baner__before {
@@ -254,6 +257,9 @@ header {
       cursor: pointer; }
       .column-projects__item .for-hover:hover .column-projects__item__img__view {
         opacity: 1; }
+        @media (max-width: 991px) {
+          .column-projects__item .for-hover:hover .column-projects__item__img__view {
+            opacity: 0; } }
       .column-projects__item .for-hover:hover a, .column-projects__item .for-hover:hover span {
         color: #FF2E5D; }
     .column-projects__item__img {
@@ -613,7 +619,8 @@ footer {
     color: #000;
     -webkit-transition: 0.2s;
     transition: 0.2s;
-    border: 1px solid #DDDDDD; }
+    border: 1px solid #DDDDDD;
+    border-radius: 0; }
     .contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder {
       color: #999999; }
     .contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {

@@ -171,6 +171,12 @@ header{
         .main-baner__before__img{
             &:before{
                 opacity: 1;
+                
+            }
+            @media (max-width: 991px){
+                 &:before{
+                    opacity: 0;
+                }   
             }
         }
         .main-baner__text{
@@ -265,10 +271,15 @@ header{
         }
         .for-hover{
             cursor: pointer;
+            
             &:hover{
                 .column-projects__item__img__view{
                     opacity: 1;
+                    @media (max-width: 991px){
+                        opacity: 0;
+                    }
                 }
+                
                 a,span{
                     color: #FF2E5D;
                 }
@@ -648,6 +659,7 @@ footer{
         color: #000;
         transition: 0.2s;
         border: 1px solid #DDDDDD;
+        border-radius: 0;
         &::-webkit-input-placeholder {
             color: #999999;
         }
