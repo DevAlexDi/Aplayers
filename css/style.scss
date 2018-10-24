@@ -648,6 +648,7 @@ footer{
     .w-100{
         position: relative;
         margin-top: -1px;
+        
     }
     input,textarea{
         outline: none;
@@ -661,6 +662,7 @@ footer{
         border: 1px solid #DDDDDD;
         border-radius: 0;
         box-shadow: none;
+        -webkit-appearance: none;
         &::-webkit-input-placeholder {
             color: #999999;
         }
