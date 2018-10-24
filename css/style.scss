@@ -825,11 +825,9 @@ footer{
         transform: rotate(-90deg) translateY(-217px);
         transform-origin: right top;
         @media (max-width: 991px){
-            overflow-y: auto;
+            overflow-y: hidden;
             overflow-x: hidden;
-            user-select: auto;
-            -moz-user-select: auto;
-            -khtml-user-select: auto;
+          
         }
         
     }
@@ -848,11 +846,7 @@ footer{
 //                border: 2px solid #FF2E5D;
 //            } 
 //        }
-        @media (max-width: 991px){
-           user-select: auto;
-            -moz-user-select: auto;
-            -khtml-user-select: auto; 
-        }
+       
         &__before{
             position: relative;
             width: 100%;

@@ -761,13 +761,8 @@ footer {
             transform-origin: right top; }
     @media (max-width: 991px) {
       .slider-nav .photos-wrapp {
-        overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-user-select: auto;
-            -ms-user-select: auto;
-                user-select: auto;
-        -moz-user-select: auto;
-        -khtml-user-select: auto; } }
+        overflow-y: hidden;
+        overflow-x: hidden; } }
   .slider-nav__slide {
     width: 12%;
     padding: 1px;
@@ -781,13 +776,6 @@ footer {
     -webkit-user-select: none;
         -ms-user-select: none;
             user-select: none; }
-    @media (max-width: 991px) {
-      .slider-nav__slide {
-        -webkit-user-select: auto;
-            -ms-user-select: auto;
-                user-select: auto;
-        -moz-user-select: auto;
-        -khtml-user-select: auto; } }
     .slider-nav__slide__before {
       position: relative;
       width: 100%;
