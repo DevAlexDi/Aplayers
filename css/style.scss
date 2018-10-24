@@ -830,7 +830,7 @@ footer{
         transform: rotate(-90deg) translateY(-217px);
         transform-origin: right top;
         @media (max-width: 991px){
-            overflow-y: auto;
+            overflow-y: hidden;
             overflow-x: hidden;
            
         }
