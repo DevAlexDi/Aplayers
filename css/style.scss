@@ -827,9 +827,9 @@ footer{
         @media (max-width: 991px){
             overflow-y: auto;
             overflow-x: hidden;
-            user-select: auto;
-            -moz-user-select: auto;
-            -khtml-user-select: auto;
+            user-select:all;
+            -moz-user-select: all;
+            -khtml-user-select: all;
             box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -842,7 +842,6 @@ footer{
         cursor: pointer;
         transform: rotate(90deg);
         transform-origin: center;
-        outline: none;
         -moz-user-select: none;
         -khtml-user-select: none;
         user-select: none; 
@@ -853,11 +852,13 @@ footer{
 //        }
         @media (max-width: 991px){
            user-select: auto;
-            -moz-user-select: auto;
-            -khtml-user-select: auto; 
+            outline: 0;
+            user-select:all;
+            -moz-user-select: all;
+            -khtml-user-select: all;
             box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
         }
         &__before{
             position: relative;

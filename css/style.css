@@ -763,11 +763,11 @@ footer {
       .slider-nav .photos-wrapp {
         overflow-y: auto;
         overflow-x: hidden;
-        -webkit-user-select: auto;
-            -ms-user-select: auto;
-                user-select: auto;
-        -moz-user-select: auto;
-        -khtml-user-select: auto;
+        -webkit-user-select: all;
+            -ms-user-select: all;
+                user-select: all;
+        -moz-user-select: all;
+        -khtml-user-select: all;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box; } }
@@ -779,7 +779,6 @@ footer {
             transform: rotate(90deg);
     -webkit-transform-origin: center;
             transform-origin: center;
-    outline: none;
     -moz-user-select: none;
     -webkit-user-select: none;
         -ms-user-select: none;
@@ -787,10 +786,15 @@ footer {
     @media (max-width: 991px) {
       .slider-nav__slide {
         -webkit-user-select: auto;
+           -moz-user-select: auto;
             -ms-user-select: auto;
                 user-select: auto;
-        -moz-user-select: auto;
-        -khtml-user-select: auto;
+        outline: 0;
+        -webkit-user-select: all;
+            -ms-user-select: all;
+                user-select: all;
+        -moz-user-select: all;
+        -khtml-user-select: all;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box; } }
