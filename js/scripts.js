@@ -1,5 +1,35 @@
 $(document).ready(function () {
    
+    
+     var jsonGalaryBaner = [
+        [
+            {
+                src: 'img/main-baner.jpg',
+                w: 1860,
+                h: 783,
+                title: 'Some Title 1'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ]
+    ]
+    
     var jsonGalary = [
         [
             {
@@ -9,10 +39,22 @@ $(document).ready(function () {
                 title: 'Some Title 1'
             },
             {
-                src: 'img/1.jpg',
-                w: 442,
-                h: 370,
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
                 title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
             }
         ],
         [
@@ -23,136 +65,22 @@ $(document).ready(function () {
                 title: 'Some Title 1'
             },
             {
-                src: 'img/2.jpg',
-                w: 443,
-                h: 478,
-                title: 'qqq'
-            }
-        ],
-        [
-            {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some Title Some Title'
-            },
-            {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
-            },
-            {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some Title Some Title'
-            },
-            {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/2.jpg',
-                w: 443,
-                h: 478,
-                title: 'Some Title 1'
-            },
-            {
-                src: 'img/2.jpg',
-                w: 443,
-                h: 478,
-                title: 'qqq'
-            }
-        ],
-        [
-            {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
-            },
-            {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/1.jpg',
-                w: 442,
-                h: 370,
-                title: 'Some Title 1'
-            },
-            {
-                src: 'img/1.jpg',
-                w: 442,
-                h: 370,
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
                 title: 'Some Title 2'
-            }
-        ],
-        [
-            {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
             },
             {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some Title Some Title'
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
             },
             {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/2.jpg',
-                w: 443,
-                h: 478,
-                title: 'Some Title 1'
-            },
-            {
-                src: 'img/2.jpg',
-                w: 443,
-                h: 478,
-                title: 'qqq'
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
             }
         ],
         [
@@ -163,24 +91,22 @@ $(document).ready(function () {
                 title: 'Some Title Some Title'
             },
             {
-                src: 'img/3.jpg',
-                w: 442,
-                h: 534,
-                title: 'Some TitleSome TitleSome Title'
-            }
-        ],
-        [
-            {
-                src: 'img/1.jpg',
-                w: 442,
-                h: 370,
-                title: 'Some Title 1'
-            },
-            {
-                src: 'img/1.jpg',
-                w: 442,
-                h: 370,
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
                 title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
             }
         ],
         [
@@ -191,10 +117,22 @@ $(document).ready(function () {
                 title: 'Some TitleSome TitleSome Title'
             },
             {
-                src: 'img/4.jpg',
-                w: 2333,
-                h: 1555,
-                title: 'Some TitleSome TitleSome Title'
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
             }
         ],
         [
@@ -205,10 +143,282 @@ $(document).ready(function () {
                 title: 'Some Title Some Title'
             },
             {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/2.jpg',
+                w: 443,
+                h: 478,
+                title: 'Some Title 1'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/4.jpg',
+                w: 2333,
+                h: 1555,
+                title: 'Some TitleSome TitleSome Title'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/1.jpg',
+                w: 442,
+                h: 370,
+                title: 'Some Title 1'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/4.jpg',
+                w: 2333,
+                h: 1555,
+                title: 'Some TitleSome TitleSome Title'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
                 src: 'img/3.jpg',
                 w: 442,
                 h: 534,
+                title: 'Some Title Some Title'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/2.jpg',
+                w: 443,
+                h: 478,
+                title: 'Some Title 1'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/3.jpg',
+                w: 442,
+                h: 534,
+                title: 'Some Title Some Title'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/1.jpg',
+                w: 442,
+                h: 370,
+                title: 'Some Title 1'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/4.jpg',
+                w: 2333,
+                h: 1555,
                 title: 'Some TitleSome TitleSome Title'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
+            }
+        ],
+        [
+            {
+                src: 'img/3.jpg',
+                w: 442,
+                h: 534,
+                title: 'Some Title Some Title'
+            },
+            {
+                src: 'img/11.jpg',
+                w: 1600,
+                h: 1600,
+                title: 'Some Title 2'
+            },
+            {
+                src: 'img/12.jpg',
+                w: 1600,
+                h: 1187,
+                title: 'Some Title 3'
+            },
+            {
+                src: 'img/13.jpg',
+                w: 989,
+                h: 1400,
+                title: 'Some Title 4'
             }
         ]
     ];
@@ -252,10 +462,36 @@ $(document).ready(function () {
     
     
     
+    //галерейка Главная банер
     
     
-    
-    
+     $('.main-baner').click(function(e){
+        event.preventDefault();
+        var pswp = $('.pswp')[0];
+        var index = $(this).index();
+        var options = {
+            index: 0,
+            bgOpacity: 1,
+            showHideOpacity: true
+        }
+        options.history = false;
+        options.bgOpacity = 0.7;
+
+        let itemClicked = $(this)[0];
+        options.getThumbBoundsFn = function (index) {
+            var thumbnail = itemClicked;
+            var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+            var rect = thumbnail.getBoundingClientRect();
+            return {
+                x: rect.left,
+                y: rect.top + pageYScroll,
+                w: rect.width
+            };
+        }
+
+        var lightBox = new PhotoSwipe(pswp, PhotoSwipeUI_Default, jsonGalaryBaner[index], options);
+        lightBox.init();
+    });
     
     
     

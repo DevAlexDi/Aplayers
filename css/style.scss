@@ -182,7 +182,7 @@ header{
         width: 100%;
         overflow: hidden;
         cursor: pointer;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         &:before{
             content: '';
             display: block;
@@ -275,7 +275,7 @@ header{
             }
         }
         &__img{
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             position: relative;
             cursor: pointer;
             &__view{
@@ -826,6 +826,10 @@ footer{
         transform-origin: right top;
         @media (max-width: 991px){
             overflow-y: auto;
+            overflow-x: hidden;
+            user-select: auto;
+            -moz-user-select: auto;
+            -khtml-user-select: auto;
         }
         
     }
@@ -844,6 +848,11 @@ footer{
 //                border: 2px solid #FF2E5D;
 //            } 
 //        }
+        @media (max-width: 991px){
+           user-select: auto;
+            -moz-user-select: auto;
+            -khtml-user-select: auto; 
+        }
         &__before{
             position: relative;
             width: 100%;
