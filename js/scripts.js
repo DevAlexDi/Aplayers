@@ -440,7 +440,7 @@ $(document).ready(function () {
 //        options.history = false;
 //        options.bgOpacity = 0.7;
 //
-//        let itemClicked = $(this)[0];
+//        var itemClicked = $(this)[0];
 //        options.getThumbBoundsFn = function (index) {
 //            var thumbnail = itemClicked;
 //            var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -477,7 +477,7 @@ $(document).ready(function () {
 //        options.history = false;
 //        options.bgOpacity = 0.7;
 //
-//        let itemClicked = $(this)[0];
+//        var itemClicked = $(this)[0];
 //        options.getThumbBoundsFn = function (index) {
 //            var thumbnail = itemClicked;
 //            var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -551,7 +551,7 @@ $(document).ready(function () {
 
     
     
-    let countOfSlides = 9;
+    var countOfSlides = 9;
     
     function checkCountSlides(){
         if($(window).width() <= 991 && $(window).width() > 767){
@@ -804,7 +804,7 @@ $(document).ready(function () {
 //            options.history = false;
 //            options.bgOpacity = 0.7;
 //          
-//            let itemClicked = $(this)[0];
+//            var itemClicked = $(this)[0];
 //            options.getThumbBoundsFn = function (index) {
 //                var thumbnail = itemClicked;
 //                var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
