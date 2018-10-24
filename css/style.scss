@@ -660,6 +660,7 @@ footer{
         transition: 0.2s;
         border: 1px solid #DDDDDD;
         border-radius: 0;
+        box-shadow: none;
         &::-webkit-input-placeholder {
             color: #999999;
         }
