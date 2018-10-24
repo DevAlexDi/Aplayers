@@ -438,6 +438,9 @@ footer{
         padding: 0;
     }
     &--xs-padd{
+        @media (max-width: 991px){
+           position: relative;
+        }
        @media (max-width: 767px){
             padding: 0 5%;
         } 
@@ -784,27 +787,17 @@ footer{
     margin-bottom: 105px;
     @media (max-width: 991px){
       margin-bottom: 64px;
+        position: relative;
     }
 }
 .photos-wrapp::-webkit-scrollbar {
     width: 2px;
     height: 2px;
-     @media (max-width: 991px){
-          background: #fff;
-        width: 7px;
-         height: auto;
-    }
 }
 .photos-wrapp::-webkit-scrollbar-button {
     width: 2px;
     height: 2px;
-     @media (max-width: 991px){
-         width: auto;
-    height:auto;
-             background: rgba(0,0,0,.1);
-        border-radius: 2.5px;
-        cursor: pointer;
-    }
+    
 }
 
 
@@ -839,12 +832,7 @@ footer{
         @media (max-width: 991px){
             overflow-y: auto;
             overflow-x: hidden;
-            user-select:all;
-            -moz-user-select: all;
-            -khtml-user-select: all;
-            box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+           
         }
         
     }
@@ -857,20 +845,8 @@ footer{
         -moz-user-select: none;
         -khtml-user-select: none;
         user-select: none; 
-//        &.active-sl{
-//            .slider-nav__slide__before{
-//                border: 2px solid #FF2E5D;
-//            } 
-//        }
         @media (max-width: 991px){
-           user-select: auto;
             outline: 0;
-            user-select:all;
-            -moz-user-select: all;
-            -khtml-user-select: all;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
         }
         &__before{
             position: relative;

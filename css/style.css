@@ -430,6 +430,9 @@ footer {
   @media (max-width: 767px) {
     .gum-padd {
       padding: 0; } }
+  @media (max-width: 991px) {
+    .gum-padd--xs-padd {
+      position: relative; } }
   @media (max-width: 767px) {
     .gum-padd--xs-padd {
       padding: 0 5%; } }
@@ -722,27 +725,16 @@ footer {
   margin-bottom: 105px; }
   @media (max-width: 991px) {
     .m-w-slider-nav {
-      margin-bottom: 64px; } }
+      margin-bottom: 64px;
+      position: relative; } }
 
 .photos-wrapp::-webkit-scrollbar {
   width: 2px;
   height: 2px; }
-  @media (max-width: 991px) {
-    .photos-wrapp::-webkit-scrollbar {
-      background: #fff;
-      width: 7px;
-      height: auto; } }
 
 .photos-wrapp::-webkit-scrollbar-button {
   width: 2px;
   height: 2px; }
-  @media (max-width: 991px) {
-    .photos-wrapp::-webkit-scrollbar-button {
-      width: auto;
-      height: auto;
-      background: rgba(0, 0, 0, 0.1);
-      border-radius: 2.5px;
-      cursor: pointer; } }
 
 .slider-nav {
   position: relative; }
@@ -774,15 +766,7 @@ footer {
     @media (max-width: 991px) {
       .slider-nav .photos-wrapp {
         overflow-y: auto;
-        overflow-x: hidden;
-        -webkit-user-select: all;
-            -ms-user-select: all;
-                user-select: all;
-        -moz-user-select: all;
-        -khtml-user-select: all;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box; } }
+        overflow-x: hidden; } }
   .slider-nav__slide {
     width: 12%;
     padding: 1px;
@@ -797,19 +781,7 @@ footer {
             user-select: none; }
     @media (max-width: 991px) {
       .slider-nav__slide {
-        -webkit-user-select: auto;
-           -moz-user-select: auto;
-            -ms-user-select: auto;
-                user-select: auto;
-        outline: 0;
-        -webkit-user-select: all;
-            -ms-user-select: all;
-                user-select: all;
-        -moz-user-select: all;
-        -khtml-user-select: all;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box; } }
+        outline: 0; } }
     .slider-nav__slide__before {
       position: relative;
       width: 100%;
