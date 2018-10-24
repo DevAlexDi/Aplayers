@@ -597,12 +597,20 @@ $(document).ready(function () {
         $('.slider-nav__slide').css({
             'width': width_scroll
         });
-        $('.slider-nav').css({
-            'min-height':  width_scroll + 2
-        });
+        
         $('.slider-nav .photos-wrapp').css({
             'width': width_scroll + 3
         });
+        if($(window).width()< 991){
+             $('.slider-nav').css({
+            'min-height':  width_scroll + 5
+        });
+        }
+        else{
+             $('.slider-nav').css({
+            'min-height':  width_scroll + 2
+        });
+        }
         
         $('.slider-nav .photos-wrapp').css({
             'transform': 'rotate(-90deg) translateY(-'+(width_scroll + 2)+'px)'
