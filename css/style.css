@@ -976,4 +976,7 @@ footer {
 .pswp__ui--fit .pswp__top-bar, .pswp__ui--fit .pswp__caption {
   background: transparent; }
 
+.pswp__caption__center {
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map */

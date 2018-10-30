@@ -545,7 +545,8 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         dots:false,
-        fade: true
+        fade: true,
+        swipe: false
         
     });
 
@@ -698,39 +699,6 @@ $(document).ready(function () {
             var cur2 = curXPos ;
             
             
-      
-            //console.log( $('.photos-wrapp').scrollTop() + ((cur1 - cur2)* -1));
-            
-//            if(cur1 >= $('.slider-nav').width()){
-//                cur1 = 
-//            }
-
-            
-//            if((cur1 - $('.slider-nav').offset().left) < 0 || 
-//                ($('.photos-wrapp').scrollTop() + $('.slider-nav').width()) >= (($('.slider-nav__slide').width() + 2.2) * $('.slider-nav__slide').length)){
-//                
-//                if(CountBeginLeftFlag){
-//                    CountBeginLeft = cur1;
-//                    
-//                    CountBeginLeftFlag = false;
-//                }
-//                
-//                
-//                console.log(cur1); 
-//                console.log(cur2);
-//               
-//                $('.photos-wrapp').css({
-//                   left: (cur1 - CountBeginLeft) / 2
-//                }) 
-//            }
-//            else{
-//                $('.photos-wrapp').css({
-//                   left: 0
-//                }) 
-//            }
-     
-
-
             $('.photos-wrapp').scrollTop(photosScrollTop + ((cur1 - cur2)* -1)); 
          
             
@@ -755,6 +723,87 @@ $(document).ready(function () {
 //            }, 500);
           }
       });
+    
+    
+    $('.proj-left').click(function(){
+        
+        if(index != 1){
+            
+            $('.slider-project').slick('slickPrev');
+            
+            if($(window).width() >= 991){
+               
+                $('.photos-wrapp').animate({
+                    scrollTop: $('.photos-wrapp').scrollTop() - width_scroll
+                }, 300, "linear", function() {
+                    photosScrollTop = $('.photos-wrapp').scrollTop();
+
+                });
+
+                
+            }
+            else{
+                console.log('ok');
+               
+                $('.slider-nav').animate({
+                    scrollLeft: $('.slider-nav').scrollLeft() - width_scroll
+                }, 300, "linear", function() {
+                    photosScrollTop = $('.photos-wrapp').scrollTop();
+
+                });
+
+               
+            }
+            
+            index -= 1;
+
+            $('.active-cube').css({
+                top: (index * width_scroll) - width_scroll
+            });
+        }
+        
+    });
+
+
+    $('.proj-right').click(function(){
+       
+        
+        if((index + 1) <= $('.slider-nav__slide').length){
+            
+            $('.slider-project').slick('slickNext');
+            
+            if($(window).width() >= 991){
+                
+                $('.photos-wrapp').animate({
+                    scrollTop: $('.photos-wrapp').scrollTop() + width_scroll
+                }, 300,"linear", function() {
+                    photosScrollTop = $('.photos-wrapp').scrollTop();
+                });
+                
+            }
+             else{
+                console.log('ok');
+               
+                $('.slider-nav').animate({
+                    scrollLeft: $('.slider-nav').scrollLeft() + width_scroll
+                }, 300,"linear", function() {
+                    photosScrollTop = $('.photos-wrapp').scrollTop();
+                });
+
+               
+            }    
+                
+                
+            index += 1;
+
+
+
+            $('.active-cube').css({
+                top: (index * width_scroll) - width_scroll
+            });
+        }
+
+    });
   
    
     
@@ -827,22 +876,7 @@ $(document).ready(function () {
             var lightBox = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
             lightBox.init();
         });
-    }); 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    });  
     
 });
 
